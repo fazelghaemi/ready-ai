@@ -1,0 +1,131 @@
+/* Pop-up Overlay */
+.hmyt-pwa-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hmyt-pwa-popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hmyt-pwa-popup-container {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hmyt-pwa-popup-overlay.show .hmyt-pwa-popup-container {
+    transform: translateY(0);
+}
+
+.hmyt-pwa-popup-container h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hmyt-pwa-popup-container p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.hmyt-pwa-popup-container .ios-install-steps {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ios-install-steps p svg {
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+.hmyt-pwa-popup-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+.hmyt-pwa-popup-button {
+    background-color: #2d3748;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.hmyt-pwa-popup-button:hover {
+    background-color: #4a5568;
+}
+
+.hmyt-pwa-popup-button.close-btn {
+    background-color: #dbe0e9;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.hmyt-pwa-popup-button.close-btn-ios {
+    background-color: #2d3748;
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+}
+
+.hmyt-pwa-popup-button.close-btn:hover {
+    background-color: #d0d4db;
+}
+
+.hmyt-pwa-popup-button.close-btn-ios:hover {
+    background-color: #404b5f;
+}
+
+button.hmyt-pwa-popup-button.install-btn {
+    width: 100% ;
+}
+
+@media (min-width: 768px) {
+    .hmyt-pwa-popup-overlay {
+        align-items: center;
+    }
+
+    .hmyt-pwa-popup-container {
+        border-radius: 15px;
+        transform: translateY(0);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .hmyt-pwa-popup-overlay.show .hmyt-pwa-popup-container {
+        opacity: 1;
+    }
+}
