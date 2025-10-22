@@ -1,10 +1,10 @@
 <?php
 /*
- * Plugin Name: ReadyMIND AI
+ * Plugin Name: ReadyMIND | هوش مصنوعی ردی استودیو
  * Plugin URI: https://readystudio.ir/ai/
- * Description: ReadyMIND artificial intelligence assistant for WordPress.
+ * Description: ReadyMIND artificial intelligence assistant for WordPress. هوش مصنوعی ردی استودیو، دستیار پرقدرت و همه جانبه در سایت شما
  * Version: 2.0.1
- * Author: Ready Studio
+ * Author: Ready Studio | Fazelghaemi
  * Author URI: https://readystudio.ir/
  * Requires at least: 6.0
  * Requires PHP: 7.4
