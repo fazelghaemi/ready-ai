@@ -1,10 +1,10 @@
 <?php
 /*
- * Plugin Name: هوش مصنوعی ردی استودیو
+ * Plugin Name: ReadyMIND AI
  * Plugin URI: https://readystudio.ir/ai/
- * Description: همیار شما در مسیر رشد هوشمند
+ * Description: ReadyMIND artificial intelligence assistant for WordPress.
  * Version: 2.0.1
- * Author: ردی استودیو
+ * Author: Ready Studio
  * Author URI: https://readystudio.ir/
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -70,7 +70,7 @@ function hmyt_safely_include_custom_hooks() {
         include_once $file_path;
     } catch (Throwable $e) {
         $error_message = sprintf(
-            'Error in Hamyar Tools custom hooks file: "%s" in %s on line %d',
+            'Error in ReadyMIND custom hooks file: "%s" in %s on line %d',
             $e->getMessage(),
             $e->getFile(),
             $e->getLine()
@@ -82,8 +82,8 @@ function hmyt_safely_include_custom_hooks() {
             ?>
             <div class="notice notice-error is-dismissible">
                 <p><?php
-                    echo '<b>همیار تولز:</b> خطایی در فایل قلاب‌های سفارشی شما شناسایی شد و برای جلوگیری از خرابی سایت، اجرای آن متوقف شد.';
-                    echo '<br>لطفاً کدهای خود را در مسیر <code>/wp-content/plugins/hamyar-tools/includes/hooks/custom-hooks.php</code> بررسی و اصلاح کنید.';
+                    echo '<b>ReadyMIND:</b> خطایی در فایل قلاب‌های سفارشی شما شناسایی شد و برای جلوگیری از خرابی سایت، اجرای آن متوقف شد.';
+                    echo '<br>لطفاً کدهای خود را در مسیر <code>/wp-content/plugins/ready-ai/includes/hooks/custom-hooks.php</code> بررسی و اصلاح کنید.';
                     echo '<br><strong style="color: #c92c2c;">جزئیات خطا:</strong> <i style="user-select: all;">' . esc_html($e->getMessage()) . ' (خط ' . $e->getLine() . ')</i>';
                 ?></p>
             </div>
